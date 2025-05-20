@@ -25,7 +25,8 @@ Puerto de ejeución 8080
 http://localhost:8080
 ```
 PERSONA
-#GET
+-
+GET
 ```
 http://localhost:8080/person
 ```
