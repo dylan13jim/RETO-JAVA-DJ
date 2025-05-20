@@ -35,6 +35,7 @@ http://localhost:8080/person
 
 -
 POST
+-
 ```
 http://localhost:8080/person
 ```
@@ -54,6 +55,7 @@ http://localhost:8080/person
 
 -
 PUT
+-
 ```
 http://localhost:8080/person/{/id}
 ```
@@ -62,6 +64,7 @@ http://localhost:8080/person/{/id}
 
 -
 DELETE
+-
 ```
 http://localhost:8080/person/{/id}
 ```
@@ -71,6 +74,7 @@ http://localhost:8080/person/{/id}
 CLIENTE
 -
 GET
+-
 ```
 http://localhost:8080/client
 ```
@@ -79,6 +83,7 @@ http://localhost:8080/client
 
 -
 POST
+-
 ```
 http://localhost:8080/client
 ```
@@ -97,6 +102,7 @@ http://localhost:8080/client
 
 -
 PUT
+-
 ```
 http://localhost:8080/client/{/id}
 ```
@@ -107,6 +113,7 @@ http://localhost:8080/client/{/id}
 
 -
 DELETE
+-
 ```
 http://localhost:8080/client/{/id}
 ```
