@@ -5,6 +5,8 @@ MICROSERVICIO DE PERSONA Y CLIENTE
 --
 BDD RELACIONAL
 --
+</br>Cabe mencionar que tiene que crear la bdd en el PGAdmin, ademas de que tiene que crear un usaurio y contraseña y modificar en el application propietis</br>
+
 ```
 # Nombre de la aplicación
 spring.application.name=retomicroservices
