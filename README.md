@@ -5,8 +5,15 @@ MICROSERVICIO DE PERSONA Y CLIENTE
 --
 BDD RELACIONAL
 --
-</br>Cabe mencionar que tiene que crear la bdd en el PGAdmin, ademas de que tiene que crear un usaurio y contraseña y modificar en el application propietis</br>
+</br>Cabe mencionar que tiene que crear la bdd en el PGAdmin, ademas de que tiene que crear un usaurio y contraseña y modificar en el application properties</br>
 
+```
+# Configuración de la base de datos
+spring.datasource.url=jdbc:postgresql://localhost:5432/retovf
+spring.datasource.username=dylan
+spring.datasource.password=130900
+```
+</br>Configuracion completa del application properties</br>
 ```
 # Nombre de la aplicación
 spring.application.name=retomicroservices
