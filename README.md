@@ -293,3 +293,8 @@ Funcionamiento del deposito y retiro
 Para que funciona correctamente el sistema, de manera obligatoria debe colocar ya sea (RETIRO - retiro - Retiro - etc puede alternar entre mayuscuala o minuscula, si cumple con la palabra estipulada funcionara ) o (DEPOSITO - deposito - Deposito), caso contrario el sistema generara un mensaje de alerta.
 ![image](https://github.com/user-attachments/assets/357df3ac-cf1a-40f3-951e-67feb8f674d2)
 
+DESARROLLO D PRUEBAS UNITARIAS
+-
+![image](https://github.com/user-attachments/assets/613db481-21a1-4f0a-bc6c-4e82ca105b7e)
+
+
