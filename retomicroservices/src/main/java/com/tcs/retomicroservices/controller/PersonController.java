@@ -17,16 +17,32 @@ public class PersonController {
 
     @PostMapping
     public ResponseEntity<String> postPerson(@RequestBody Person person) {
-        // Validación de cédula duplicada
+
         if (servicePerson.isIdentificationExist(person.getIdentification())) {
             return ResponseEntity.badRequest().body("Cédula ya registrada ingrese otra.");
+        }
+        if (!person.getIdentification().matches("\\d+")){
+            return ResponseEntity.badRequest().body("La cedula solo debe contener numeros");
         }
         if (person.getIdentification().length() != 10) {
             return ResponseEntity.badRequest().body("La cedula debe tener 10 dígitos.");
         }
+        int provincia = Integer.parseInt(person.getIdentification().substring(0, 2));
+        if (provincia < 1 || provincia > 30){
+            return ResponseEntity.badRequest().body("Error cedula");
+        }
+
+        if (!person.getAgeperson().matches("\\d+")){
+            return ResponseEntity.badRequest().body("La edad solo debe ser numerica");
+        }
+
+        if (!person.getPhoneperson().matches("\\d+")){
+            return ResponseEntity.badRequest().body("Ingrese solo datos numericos para el numero telefonico");
+        }
         if (person.getPhoneperson().length() != 10) {
             return ResponseEntity.badRequest().body("Número de teléfono debe tener 10 dígitos.");
         }
+
         servicePerson.postPerson(person);
         return ResponseEntity.ok("Persona agregada correctamente.");
     }
@@ -50,9 +66,25 @@ public class PersonController {
         if (updatedPerson.getIdentification().length() != 10) {
             return ResponseEntity.badRequest().body("La cedula debe tener 10 dígitos.");
         }
+        if (!updatedPerson.getIdentification().matches("\\d+")){
+            return ResponseEntity.badRequest().body("La cedula solo debe contener numeros");
+        }
+
+        int provincia = Integer.parseInt(updatedPerson.getIdentification().substring(0, 2));
+        if (provincia < 1 || provincia > 30) {
+            return ResponseEntity.badRequest().body("La cédula debe iniciar con un código de provincia válido (01 a 30).");
+        }
+
+        if (!updatedPerson.getAgeperson().matches("\\d+")){
+            return ResponseEntity.badRequest().body("La edad solo debe ser numerica");
+        }
+        if (!updatedPerson.getPhoneperson().matches("\\d+")){
+            return ResponseEntity.badRequest().body("Ingrese solo datos numericos para el numero telefonico");
+        }
         if (updatedPerson.getPhoneperson().length() != 10) {
             return ResponseEntity.badRequest().body("Número de teléfono debe tener 10 dígitos.");
         }
+
         servicePerson.putPerson(idPerson, updatedPerson);
         return ResponseEntity.ok("Se actualizó el registro.");
     }
